@@ -1,12 +1,15 @@
+const UserDetails = async ({ params }) => {
+  const { id } = await params;
 
-const UserDetails = async({params}) => {
-  const id=params.id;
-  const response=await fetch(`https://jsonplaceholder.typicode.com/users/${id}`,{cache:'no-store'});
-  const user=await response.json();
-  
-    return (
+  const response = await fetch(
+    `https://jsonplaceholder.typicode.com/users/${id}`,
+    { cache: 'no-store' }
+  );
+  const user = await response.json();
+
+  return (
     <div>{JSON.stringify(user)}</div>
-  )
-}
+  );
+};
 
-export default UserDetails
+export default UserDetails;

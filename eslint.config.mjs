@@ -1,6 +1,5 @@
-export default [
-  {
-    extends: ["next/core-web-vitals"],
-  },
-];
+import next from "eslint-config-next";
 
+export default [
+  next(),
+];
